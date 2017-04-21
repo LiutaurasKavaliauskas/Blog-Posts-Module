@@ -1,3 +1,4 @@
 <?php
 
-Route::get('{type?}/{langCode?}/{slug?}', ['middleware' => ['web'], 'uses' => 'HCPostsFrontEndController@showData']);
+Route::get('blog/{langCode?}/{slug?}', ['middleware' => ['web'], 'uses' => 'HCPostsFrontEndController@showBlog']);
+Route::get('posts/{langCode?}/{slug?}', ['middleware' => ['web'], 'uses' => 'HCPostsFrontEndController@showPost']);

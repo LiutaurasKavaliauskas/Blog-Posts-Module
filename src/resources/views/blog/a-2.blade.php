@@ -72,14 +72,14 @@
 
 <!-- Page Header -->
 <!-- Set your background image for this header on the line below. -->
-<header class="intro-header" style="background-image: url({{asset('resources/{cover_photo_id}')}}">
+<header class="intro-header" style="background-image: url({{asset('resources/')}})">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="site-heading">
-                    <h1>asdsadsadsad</h1>
+                    <h1>a</h1>
                     <hr class="small">
-                    <span class="subheading">asssssssssssssssssssssssssssssfsdfgdsag</span>
+                    <span class="subheading"></span>
                 </div>
             </div>
         </div>
@@ -94,7 +94,7 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="post-preview">
-                        <a href={{URL::route('posts', array('langCode' => $language, 'slug' => $post['translation']['slug']))}}>
+                        <a href="post.html">
                             <h2 class="post-title">
                                 {{$post['translation']['title']}}
                             </h2>

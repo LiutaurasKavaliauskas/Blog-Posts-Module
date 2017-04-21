@@ -16,6 +16,7 @@ class CreateHcPostsTable extends Migration {
 		{
 			$table->integer('count', true);
 			$table->string('id', 36)->unique('id_UNIQUE');
+			$table->string('type');
 			$table->timestamps();
 			$table->softDeletes();
 			$table->string('author_id', 36)->index('fk_hc_posts_hc_users1_idx');

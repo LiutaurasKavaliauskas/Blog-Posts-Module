@@ -18,6 +18,6 @@ class HCPosts extends HCMultiLanguageModel
      *
      * @var array
      */
-    protected $fillable = ['id', 'author_id', 'publish_at', 'expires_at', 'cover_photo_id'];
+    protected $fillable = ['id', 'author_id', 'publish_at', 'expires_at', 'cover_photo_id', 'type'];
 
 }

@@ -1,8 +1,6 @@
 <?php namespace interactivesolutions\honeycombposts\app\http\controllers;
 
-use interactivesolutions\honeycombcore\http\controllers\HCBaseController;
-use interactivesolutions\honeycombpages\app\models\HCPages;
-use interactivesolutions\honeycombpages\app\models\HCPagesTranslations;
+use interactivesolutions\honeycombacl\app\models\HCUsers;
 use interactivesolutions\honeycombposts\app\models\HCPosts;
 use interactivesolutions\honeycombposts\app\models\HCPostsTranslations;
 
@@ -56,7 +54,16 @@ class HCPostsFrontEndController
         if ($type == 'posts')
             return view('HCPosts::post.' . $slug, ['config' => $data]);
         elseif ($type == 'blog')
-            return view('HCPosts::blog.' . $slug, ['config' => $data]);
+        {
+            $list = HCPosts::select(HCPosts::getFillableFields(true))->with('translation');
+            $list = $list->join($t, "$r.id", "=", "$t.record_id")
+                ->where("$r.type", "post")
+                ->where("$t.language_code", $languageCode);
+            $posts = $list->get();
+            $users = HCUsers::all();
+
+            return view('HCPosts::blog.' . $slug, ['config' => $data, 'posts' => $posts, 'users' => $users, 'language' => $languageCode]);
+        }
     }
 
 }

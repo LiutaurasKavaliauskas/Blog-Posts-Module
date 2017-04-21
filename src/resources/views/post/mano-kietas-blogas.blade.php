@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>aa</title>
+    <title>Mano kietas blogas</title>
 
     <!-- Bootstrap Core CSS -->
     {{--<link href="{{ asset(bootstrap/css/bootstrap.min.css) }}" rel="stylesheet">--}}
@@ -75,13 +75,13 @@
 
     <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->
-    <header class="intro-header" style="background-image: url({{asset('resources/')}})">
+    <header class="intro-header" style="background-image: url({{asset('resources/a0842fd0-6b4c-4343-bf5c-e1b8b553ed90')}})">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="post-heading">
-                        <h1>aa</h1>
-                        <h2 class="subheading">aaaaaaaaaaaaaaa</h2>
+                        <h1>Mano kietas blogas</h1>
+                        <h2 class="subheading">LAlalallasad</h2>
                     </div>
                 </div>
             </div>

@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>aa</title>
+    <title>asdsadsadsad</title>
 
     <!-- Bootstrap Core CSS -->
     {{--<link href="{{ asset(bootstrap/css/bootstrap.min.css) }}" rel="stylesheet">--}}
@@ -80,8 +80,8 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="post-heading">
-                        <h1>aa</h1>
-                        <h2 class="subheading">aaaaaaaaaaaaaaa</h2>
+                        <h1>asdsadsadsad</h1>
+                        <h2 class="subheading">asssssssssssssssssssssssssssssfsdfgdsag</h2>
                     </div>
                 </div>
             </div>

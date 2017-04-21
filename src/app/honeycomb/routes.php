@@ -1,8 +1,9 @@
 <?php
 
 //honeycomb-posts/src/app/routes/admin/routes.posts.categories.php
-Route::get('posts/{langCode?}/{slug?}', ['middleware' => ['web'], 'uses' => 'HCPostsFrontEndController@showPost']);
 Route::get('blog/{langCode?}/{slug?}', ['middleware' => ['web'], 'uses' => 'HCPostsFrontEndController@showBlog']);
+Route::get('posts/{langCode?}/{slug?}', ['as' => 'posts', 'middleware' => ['web'], 'uses' => 'HCPostsFrontEndController@showPost']);
+
 
 Route::group(['prefix' => 'admin', 'middleware' => ['web', 'auth']], function ()
 {
@@ -119,4 +120,7 @@ Route::group(['prefix' => 'api', 'middleware' => ['web', 'auth-apps']], function
         Route::delete('force', ['as' => 'api.v1.posts.force.multi', 'middleware' => ['acl-apps:api_v1_interactivesolutions_honeycomb_posts_posts_force_delete'], 'uses' => 'HCPostsController@forceDelete']);
     });
 });
+
+
+//honeycomb-posts/src/app/routes/front-end/routes.posts.php
 

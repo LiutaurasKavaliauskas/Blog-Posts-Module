@@ -115,6 +115,9 @@ class HCPostsController extends HCBaseController
     {
         $data = $this->getInputData();
 
+        if($data['record']['type'] && $data['record']['type'] == 'blog')
+            HCPosts::where('type', 'blog')->delete();
+
         $record = HCPosts::create(array_get($data, 'record'));
         $record->updateTranslations(array_get($data, 'translations'));
 
@@ -259,6 +262,7 @@ class HCPostsController extends HCBaseController
         array_set($data, 'record.publish_at', array_get($_data, 'publish_at'));
         array_set($data, 'record.expires_at', array_get($_data, 'expires_at'));
         array_set($data, 'record.cover_photo_id', array_get($_data, 'cover_photo_id'));
+        array_set($data, 'record.type', array_get($_data, 'type'));
 
         $translations = array_get($_data, 'translations');
 

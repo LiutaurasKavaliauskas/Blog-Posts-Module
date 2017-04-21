@@ -38,7 +38,15 @@ class HCPostsForm
                     "fileCount"       => 1,
                     "required"        => 0,
                     "requiredVisible" => 0,
-                ], [
+                ],
+                [
+                    "type"    => "dropDownList",
+                    "fieldID" => "type",
+                    "tabID"   => trans("Post"),
+                    "label"   => trans("HCPosts::posts.type"),
+                    "options" => ["blog" => "blog", "post" => "post"],
+                ],
+                [
                     "type"            => "dateTimePicker",
                     "properties"      => [
                         "format" => "Y-MM-D HH:mm:ss",
